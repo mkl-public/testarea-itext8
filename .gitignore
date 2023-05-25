@@ -1,0 +1,7 @@
+/target/
+/.settings/
+/.classpath
+/.project
+/itextkey-*.xml
+/bin/
+/obj/
