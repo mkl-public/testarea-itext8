@@ -7,7 +7,7 @@
 	<artifactId>testarea-itext8</artifactId>
 	<packaging>jar</packaging>
 	<name>Test area for iText v8</name>
-	<version>8.0.1-SNAPSHOT</version>
+	<version>8.0.3-SNAPSHOT</version>
 
 	<build>
 		<plugins>
