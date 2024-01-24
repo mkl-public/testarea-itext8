@@ -62,7 +62,7 @@ namespace iText8.Net_Playground.Signature
                     else
                     {
                         CmsSignedData cmsSignedData = new CmsSignedData(bytes);
-                        ICollection signerInfos = cmsSignedData.GetSignerInfos().GetSigners();
+                        ICollection signerInfos = (ICollection)cmsSignedData.GetSignerInfos().GetSigners();
                         foreach (SignerInformation signer in signerInfos.Cast<SignerInformation>())
                         {
                             Org.BouncyCastle.Asn1.Cms.Attribute attribute = signer.UnsignedAttributes[PkcsObjectIdentifiers.IdAASignatureTimeStampToken];
