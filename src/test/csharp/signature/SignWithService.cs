@@ -40,7 +40,7 @@ namespace iText8.Net_Playground.Signature
         /// retrieving the certificate chain only once).
         /// </summary>
         /// <seealso cref="SignWithIExternalSignature"/>
-        class ServiceSignature : IExternalSignature
+        internal class ServiceSignature : IExternalSignature
         {
             public string GetDigestAlgorithmName()
             {
