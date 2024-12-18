@@ -35,13 +35,13 @@ public class ValidateSignatures {
     public void validate(File file) throws IOException {
         ValidatorChainBuilder builder = new ValidatorChainBuilder();
 
-        PublicSignatureValidator validator = new PublicSignatureValidator(builder);
-
         try (
             PdfReader pdfReader = new PdfReader(file);
             PdfDocument pdfDocument = new PdfDocument(pdfReader);
         ) {
-            ValidationReport report = validator.validateSignatures(pdfDocument);
+            PublicSignatureValidator validator = new PublicSignatureValidator(pdfDocument, builder);
+
+            ValidationReport report = validator.validateLatestSignature();
             System.out.println(report);
         }
     }
