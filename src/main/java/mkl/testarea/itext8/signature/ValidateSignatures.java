@@ -41,7 +41,7 @@ public class ValidateSignatures {
         ) {
             PublicSignatureValidator validator = new PublicSignatureValidator(pdfDocument, builder);
 
-            ValidationReport report = validator.validateLatestSignature();
+            ValidationReport report = validator.validateSignatures();
             System.out.println(report);
         }
     }
